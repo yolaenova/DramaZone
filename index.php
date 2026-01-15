@@ -234,6 +234,7 @@ include "koneksi.php";
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
             <li class="nav-item"><a class="nav-link" href="#article">Drama</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#aktor">Aktor</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
             <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
@@ -317,6 +318,37 @@ include "koneksi.php";
         </div>
     </section>
     <!-- article end -->
+
+    <!-- gallery begin -->
+    <section id="gallery" class="text-center p-5 bg-light">
+      <div class="container">
+        <h1 class="fw-bold display-5 pb-4">Gallery</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <?php
+          $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
+          $hasil = $conn->query($sql);
+
+          while ($row = $hasil->fetch_assoc()) {
+          ?>
+          <div class="col">
+            <div class="card h-100">
+              <img src="image/<?= $row['gambar']; ?>" class="card-img-top" alt="gallery">
+              <div class="card-body">
+                <p class="card-text"><?= $row['deskripsi']; ?></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">
+                  <?= $row['tanggal']; ?><br>
+                  oleh : <?= $row['username']; ?>
+                </small>
+              </div>
+            </div>
+          </div>
+          <?php } ?>
+        </div>
+      </div>
+    </section>
+    <!-- gallery end -->
 
     <!-- aktor -->
     <section id="aktor" class="py-5 text-center bg-light">

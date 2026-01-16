@@ -236,9 +236,9 @@ include "koneksi.php";
             <li class="nav-item"><a class="nav-link" href="#article">Drama</a></li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#aktor">Aktor</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
             <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
             <li class="nav-item"><a class="nav-link" href="#aboutme">About Me</a></li>
+             <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
             <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
             <li class="nav-item ms-3">
             <button id="btnDark" class="btn btn-dark btn-sm">
@@ -263,7 +263,7 @@ include "koneksi.php";
       <span id="tanggal"></span>
       <span id="jam"></span>
       </p>
-      <a href="#drama" class="btn btn-pastel mt-3">Lihat Drama</a>
+      <a href="#article" class="btn btn-pastel mt-3">Lihat Drama</a>
     </section>
 
     <!-- tentang saya -->
